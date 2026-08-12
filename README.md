@@ -89,18 +89,6 @@ embedding. A dilated temporal ConvNet predicts velocity at each interior waypoin
 trajectory structure while using a growing receptive field to coordinate distant waypoints.
 
 
-## Setup
-
-Python 3.10+ is supported. A CUDA-enabled PyTorch installation is recommended for training.
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e ".[dev]"
-```
-
-And then run the Flow_Matching Jupyter Notebook, select your variables, and voila :)
-
 ### Teacher and student training curves
 
 <table>
@@ -126,6 +114,17 @@ architecture and were trained for 300 epochs. The ensemble evaluates all four sp
 
 Lower is better for every reported metric. Bold values mark the best result in each metric column.
 
+## Setup
+
+Python 3.10+ is supported. A CUDA-enabled PyTorch installation is recommended for training.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
+```
+
+And then run the Flow_Matching Jupyter Notebook, select your variables, and voila :)
 
 
 
