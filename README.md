@@ -16,7 +16,7 @@ reach the requested goal, remain close to the demonstrated task behavior, move s
 unsafe configurations, and be generated quickly enough for deployment. A single model and a
 single training loss do not necessarily optimize all of these properties equally well.
 
-Conditional flow matching is attractive for this problem because it learns an entire distribution
+Conditional flow matching is chosen because it learns an entire distribution
 of trajectories instead of predicting only one deterministic path. Starting from Gaussian noise,
 the learned velocity field continuously transports a noisy trajectory toward a task-conditioned
 motion. Different noise samples can therefore produce multiple valid solutions for the same start,
@@ -59,21 +59,11 @@ Their velocity predictions are combined into a teacher ensemble. The student is 
 three complementary signals:
 
 1. **On-policy imitation:** the student begins from noise and visits its own intermediate flow
-   states. The teacher ensemble labels those states with target velocities. This matters because
-   small student errors can move inference away from the clean interpolation states encountered in
-   ordinary supervised training.
+   states. The teacher ensemble labels those states with target velocities. 
 2. **Demonstration-supervised flow matching:** real trajectories anchor the student to recorded
    behavior and prevent it from blindly inheriting every teacher error.
 3. **Smoothness regularization:** finite joint/state acceleration discourages visibly jerky
    trajectories.
-
-The main research question is whether one student can match the ensemble—and possibly outperform
-its fixed average on some held-out metrics—while requiring only one model evaluation per ODE step.
-To keep the comparison controlled, every specialist and the student uses the same temporal ConvNet
-architecture and the same 300-epoch training budget. We compare validation flow loss, rollout RMSE,
-acceleration, latency, endpoint accuracy, jerk, and predictive variance. These are research
-diagnostics rather than evidence that the generated motions are ready for execution on a physical
-robot; collision checking and simulator or hardware validation are still required.
 
 
 ## Formulation
