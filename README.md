@@ -27,6 +27,25 @@ by combining several models, but evaluating every teacher at every ODE integrati
 latency and memory use. This project investigates whether that ensemble knowledge can be transferred
 into one deployable student without losing trajectory quality.
 
+## Generated robot positions
+
+<table>
+  <tr>
+    <td align="center"><img src="Results/Robot%20Positions/Robot_pos_0.png" alt="UR5 robot position 0" width="100%"><br><sub>Position 0</sub></td>
+    <td align="center"><img src="Results/Robot%20Positions/Robot_pos_1.png" alt="UR5 robot position 1" width="100%"><br><sub>Position 1</sub></td>
+      <td align="center"><img src="Results/Robot%20Positions/Robot_pos_2.png" alt="UR5 robot position 1" width="100%"><br><sub>Position 1</sub></td>
+
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td align="center"><img src="Results/Robot%20Positions/Robot_pos_3.png" alt="UR5 robot position 2" width="100%"><br><sub>Position 2</sub></td>
+    <td align="center"><img src="Results/Robot%20Positions/Robot_pos_4.png" alt="UR5 robot position 3" width="100%"><br><sub>Position 3</sub></td>
+    <td align="center"><img src="Results/Robot%20Positions/Robot_pos_5.png" alt="UR5 robot position 4" width="100%"><br><sub>Position 4</sub></td>
+  </tr>
+</table>
+
 ## Investigating on-policy distillation
 
 The notebook trains several temporally structured convolutional teachers with different specialties:
@@ -56,24 +75,6 @@ acceleration, latency, endpoint accuracy, jerk, and predictive variance. These a
 diagnostics rather than evidence that the generated motions are ready for execution on a physical
 robot; collision checking and simulator or hardware validation are still required.
 
-## Generated robot positions
-
-<table>
-  <tr>
-    <td align="center"><img src="Results/Robot%20Positions/Robot_pos_0.png" alt="UR5 robot position 0" width="100%"><br><sub>Position 0</sub></td>
-    <td align="center"><img src="Results/Robot%20Positions/Robot_pos_1.png" alt="UR5 robot position 1" width="100%"><br><sub>Position 1</sub></td>
-      <td align="center"><img src="Results/Robot%20Positions/Robot_pos_2.png" alt="UR5 robot position 1" width="100%"><br><sub>Position 1</sub></td>
-
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td align="center"><img src="Results/Robot%20Positions/Robot_pos_3.png" alt="UR5 robot position 2" width="100%"><br><sub>Position 2</sub></td>
-    <td align="center"><img src="Results/Robot%20Positions/Robot_pos_4.png" alt="UR5 robot position 3" width="100%"><br><sub>Position 3</sub></td>
-    <td align="center"><img src="Results/Robot%20Positions/Robot_pos_5.png" alt="UR5 robot position 4" width="100%"><br><sub>Position 4</sub></td>
-  </tr>
-</table>
 
 ## Formulation
 
