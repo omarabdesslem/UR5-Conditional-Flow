@@ -1,0 +1,4 @@
+model,collision_free_rate,endpoint_rmse,demo_rmse,acceleration_rms,jerk_rms,ensemble_variance
+teacher ensemble,,0.0,0.091882765,0.10308366,0.17883098,0.0033871158957481384
+student,,0.0,0.087149836,0.109199665,0.19069538,0.0032038860954344273
+interpolation,,0.0,0.24705301,2.983214e-08,5.285091e-08,0.0
