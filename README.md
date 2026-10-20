@@ -4,8 +4,6 @@
 
 A PyTorch research baseline for generating **diverse UR5 state trajectories** from real [Berkeley Autolab UR5 demonstrations](https://huggingface.co/datasets/lerobot/berkeley_autolab_ur5). A conditional rectified-flow model generates a 32-step trajectory from a **start state, goal state, and task ID**. Four specialist teachers are combined into a velocity ensemble, then distilled into a faster single student.
 
-> **What the code actually does:** It learns from recorded numeric states, **not** RRT paths. It does **not** load occupancy maps, obstacle geometry, or camera images, and does not verify collision avoidance.
-
 ## Demonstrations
 
 ### Generated robot positions
