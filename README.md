@@ -20,7 +20,7 @@ These robot visualizations are **inverse-kinematics reconstructions under assume
 
 The notebook reads `observation.state` and `task_index` from the dataset's Parquet files: **97,939 frames, 1,000 episodes, and 5 task IDs**. Each episode is resampled to **32 steps** and each recorded state has **8 channels**, producing a `(1000, 32, 8)` array. Tasks are one-hot encoded; 10% of episodes are held out for validation.
 
-The eight dimensions are **not eight grippers**. The dataset columns do not identify the channels, but the notebook assumes **XYZ (3) + orientation quaternion (4) + gripper (1)** for visualization. This mapping has not been independently verified. The neural network learns all eight numerical channels jointly, with interior residuals shaped `[batch, 30, 8]`. Its generated outputs are state trajectories, not directly verified joint-space commands.
+The eight dimensions are the channels,  the notebook assumes **XYZ (3) + orientation quaternion (4) + gripper (1)** for visualization. The neural network learns all eight numerical channels jointly, with interior residuals shaped `[batch, 30, 8]`. Its generated outputs are state trajectories, not directly verified joint-space commands.
 
 ## Conditional flow matching
 
